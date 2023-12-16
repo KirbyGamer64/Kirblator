@@ -1,0 +1,33 @@
+/* Calculator CSS */
+body {
+    background-color: pink;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.calculator {
+    width: 340px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    top: 100px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.buttons {
+    padding-top: 20px;
+}
+#display {
+    font-size: 40px;
+    width: 330px;
+}
+.button{
+    /* border:0cm; */
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px;
+}
+input:hover {
+    background-color: pink;
+}

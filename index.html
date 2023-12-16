@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@12.2.0/lib/browser/math.min.js"></script> 
+    <script type="text/javascript" src="script.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+<form >
+    <div class="calculator">
+    <div>
+        <input type="text" name="display" id="display" placeholder="2+2=5" onkeypress="return event.key >= 48 && event.key <= 57">
+    </div>
+    <div class="buttons">
+        <input class="button" type="button" value="C" onclick="display.value = ''">
+        <input class="button" type="button" value="del" onclick="display.value = display.value.toString().slice (0,-1)">
+        <input class="button" type="button" value="()" onclick="toggleBrackets()">
+        <input class="button" type="button" value="/" onclick="addChar('/');">
+    </div>
+    <div>
+        <input class="button" type="button" value="7" onclick="addChar('7');">
+        <input class="button" type="button" value="8" onclick="addChar('8');">
+        <input class="button" type="button" value="9" onclick="addChar('9');">
+        <input class="button" type="button" value="x" onclick="addChar('*');">
+    </div>
+    <div>
+        <input class="button" type="button" value="4" onclick="addChar('4');">
+        <input class="button" type="button" value="5"onclick="addChar('5');">
+        <input class="button" type="button" value="6"onclick="addChar('6');">
+        <input class="button" type="button" value="-"onclick="addChar('-');">
+    </div>
+    <div>
+        <input class="button" type="button" value="1" onclick="addChar('1');">
+        <input class="button" type="button" value="2" onclick="addChar('2');">
+        <input class="button" type="button" value="3" onclick="addChar('3');">
+        <input class="button" type="button" value="+" onclick="addChar('+');">
+    </div>
+    <div >
+        <input class="button" type="button" value="0" onclick="addChar('0');">
+        <input class="button" type="button" value="." onclick="addChar('.');">
+        <input class="button" type="button" value="=" class="equal" onclick="display.value = math.evaluate(display.value)">
+    </div>
+</div>
+</form>
+</body>
+</html>
