@@ -36,3 +36,13 @@ function toggleBrackets() {
 function getFunnyNumber (){
     return 69;
 }
+
+function getAnswer (){
+    var input = document.getElementById ("display");
+    if (input.value == "9+10" || input.value == '10+9'){
+        input.value = '21';
+    }
+    else {
+        input.value = math.evaluate (input.value);
+    }
+}
